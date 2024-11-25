@@ -1,0 +1,50 @@
+Experiment 3 : 
+
+Install GAE and Create Hello World App
+
+Download Python : 
+
+https://www.python.org/downloads/
+
+Download Cloud SDK : 
+
+https://cloud.google.com/sdk/docs/quickstart-windows
+
+Codes :
+
+https://sxcceeduin-
+my.sharepoint.com/:o:/g/personal/varun_sxcceeduin_onmicrosoft_com/ElnPmP8lq7BPuFEaHYOD7vEBPHIXOTwsyTLfLwbO8bZJQ?e=W3KQPc
+
+Steps:
+ 
+-> Install Python
+-> Install GoogleCloud SDK in cloud.google.com
+-> Configure - {single User -> Path -> Finish}
+-> (Open) gcloud terminal :
+	gcloud init
+	sign in / sign up
+-> Folder
+   |- app.yaml				
+   |- index.py
+
+-> Open terminal (gcs)
+	C:\Users\path_to_Cloud_SDK> google-cloud-sdk\bin\dev_appserver.py "path_to_app.py"
+
+-> Prints Hello World
+
+[
+
+app.yaml : (rat, hus)
+
+runtime : python27
+api_version : 1
+threadsafe : false
+
+handlers : 
+-url:/
+scripts:index.py
+
+]
+
+
+	

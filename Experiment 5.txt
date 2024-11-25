@@ -1,0 +1,52 @@
+Experiment 5:
+
+Simulate a cloud scenario using CloudSim and run a scheduling algorithm that is not present in CloudSim
+
+(Platform as a Service)
+
+Step 1 : 
+Java Installer :
+https://www.oracle.com/java/technologies/javase-downloads.html
+
+Step 2 : 
+Eclipse : 
+https://www.eclipse.org/downloads/packages/release/oxygen/3a/eclipse-ide-java-developers
+
+Step 3 :
+Cloudsim :
+https://github.com/Cloudslab/cloudsim/releases
+
+Steps : 
+-> Install Jdk 
+-> Install Eclipse {For creating and Building a .jar File}
+-> Download cloudsim-3.0.3.zip file 
+-> Extract it
+-> Download Bandicam.4.5.7.1660.Portable
+-> Open Eclipse :
+    {File -> New -> Project -> ProjectName -> Configure -> Finish}
+-> Create JavaPackage inside Project : 
+	(source : CloudSimSimulation/src)
+	(name : com.sjfs)
+-> goto folder sjfs :
+-> add folders for scheduling algorithms
+-> In package-info.java :
+package com.sjfs
+for other .java files
+replace package com.utils by "package com.sjfs"
+-> right click on project 
+-> Click Build Path 
+-> Configure them
+-> By selecting cloudsim-3.0.3.jar file in Class path {arises in dialogue box on clicking configure Build path}
+-> Run the program 
+
+
+Output: 
+
+Cloudlet ID | STATUS  | Data center ID | VM ID | Time | Start Time | Finish Time
+01 	    | SUCCESS | 06	       | 06    |106   | 0.01 	   | 106
+.
+.
+.
+.
+Makespan using SJF : 4907.44902
+com.sjfs.SJF_Scheduler finished!

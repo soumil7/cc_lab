@@ -1,0 +1,18 @@
+Experiment 6: 
+
+Attach Windows Folder with Ubuntu
+
+Steps : 
+-> Use Ubuntu in Guest OD
+-> Click {Devices -> Shared Folders -> Shared Folder Settings-> Create new Shared Folders (Select required files / folder from Windows)}
+-> Check (ram) - Dialogue Box {
+- Read
+- Auto Mount
+- Make Permanent Button
+}
+-> Again Click Devices 
+-> Click {Devices -> Insert Guest Additions CD Images... (Install Guest Addition CD Images)}
+-> Click on the folder copy path
+-> Open Terminal Change Directory (cd) to new folder where the folder / file from Windows to be placed 
+-> Run the following command from terminal to attach the folder :
+sudo mount -t vboxsf <Windows folder name> <Ubuntu folder name>

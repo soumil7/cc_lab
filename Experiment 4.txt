@@ -1,0 +1,14 @@
+Experiment 4:
+
+Use GAE Launcher to Launch the web applications
+
+-> Create folder (web_app)
+	|- images(folder)
+	|- app (yaml)
+	|- index.html
+	|- main.css
+	|- todo.py
+-> Open GCS terminal :
+	C:Users\path_to_GCS> google-cloud-sdk\bin\dev_appserver.py "path_to_web_app"
+-> runs on local host 8080
+

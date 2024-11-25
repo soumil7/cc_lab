@@ -1,0 +1,19 @@
+Experiment 7 : 
+
+To launch Instance (Virtual Machine) in Open Stack : 
+
+Steps:
+-> Open OpenStack
+-> Login by username and password -> connect
+-> Overview page
+-> Shows (IVRFSVV) {Instances, VCPUs, RAM, Floating IPs, Security Groups, Volumes, Volumes Storage}
+-> Click on Instances: 
+-> Configure by providing details to it: 
+{DS, FN^2, SK, CS^2}
+[Details, Source (Fedora32), Flavor (My Custom Flavor), Network, Network Ports, Security Groups, Key Pair, Configuration, Server Groups, Scheduler Hints]
+-> Instance :
+Instance Name | Image | IP Address | size | key pair | status | time | action
+-> Launch Instances 
+-> Delete Instances
+-> View detals Click on (Instances Name)
+-> In Log -> live real-time running of fedora32 instance and asks for login

@@ -1,0 +1,131 @@
+Experiment 8:
+
+Install Hadoop single node cluster and run simple applications like wordcount.
+
+Sources:
+
+Hadoop : 
+
+https://muhammadbilalyar.github.io/blogs/How-to-install-Hadoop-on-Window-10/
+
+Hadoop Configuration :
+
+https://github.com/MuhammadBilalYar/Hadoop-On-Window/blob/master/Hadoop%20Configuration.zip
+
+Steps :
+
+-> Install Java JDK
+-> javac -version
+-> all folders in C Drive:
+-> hadoop-2.8.0 in C
+-> wordcount.java, .txt in C
+[-> Goto my Computer Click on properties
+-> Click Advanced System Properties
+-> Go to Environment Variables]
+-> Goto System Variables
+-> Set JAVA_HOME = C:\Java\jdk1.8.0_121
+-> Set HADOOP_HOME = C:\hadoop-2.8.0\hadoop-2.8.0
+-> Put Semi-Colon to separate patths in Path in sys varialbes
+-> Create data folder in Hadoop-2.8.0 > Hadoop-2.8.0 folder
+-> Within that Create name and data node
+-> goto 2.8.0 -> 2.8.0 -> etc -> Hadoop -> 
+	|- core-site.xml
+	|- mapred-site.xml
+	|- hdfs-site.xml
+	|- yarn-site.xml
+	|- hadoop-env.cmd
+{
+core-site.xml (cp nv)
+<configuration>
+	<property>
+		<name>fs.defaultsFS</name>
+		<value>hdfs:localhost:9000</value>
+	</property>
+</configuration>
+}
+
+{
+mapred-site.xml
+<configuration>
+	<property>
+		<name>mapreduce.framework.name</name>
+		<value>yarn</value>
+	</property>
+</configuration>
+}
+
+{
+hdfs-site.xml
+<configuration>
+	<property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>path_to_name_node</value>
+	</property>
+	<property>
+		<name>dfs.datanode.name.dir</name>
+		<value>path_to_data_node</value>
+	</property>
+</configuration>
+}
+
+{
+<configuration>
+<property>
+	<name>yarn.nodeanager.aux-services</name>
+	<value>mapreduce_shuffle</value>
+</property>
+<property>
+	<name>yarn.nodemanager.auxservices.mapreduce.shuffle.class</name>
+	<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+</configuration>
+}
+
+{
+Open hadoop-env.cmd
+SET JAVA_HOME
+}
+
+Extract Hadoop Configuration File 
+
+-> Goto Hadoop Configuration :
+	|- bin
+	|- etc
+-> Copy all inside bin and paste it in 2.8.0 > 2.88.0 > bin
+-> Goto terminal : 
+	run commands 
+	>start-all.cmd
+-> Goto netbeans and create project and application
+-> Add the Jar Folder in the Project Properties
+-> Build them 
+-> Once the .jar file is created 
+-> Goto command Prompt
+	>got to 2.8.0>2.8.0>bin
+	>hdfs namenode -format
+	(opens four windows)
+	-{namenode, datanode, nodemanager, resourcemanager}
+-> Run Jps
+-> localhost:50070 (about Hadoop)
+-> localhost:8080 (single node cluster)
+
+commands: 
+-> hadoop fs -mkdir /input_dir
+-> hadoop fs -put C:/wordcount.txt /input_dir
+-> hadoop fs -cat /input_dir
+-> hadoop fs -ls /input_dir
+-> hadoop fs -ls /input_dir/wordcount.txt
+-> hadoop jar C:/jar_file_path wordcount /input_dir /output_dir
+
+mapper job reducer job
+0		0
+100		0
+100		100
+
+
+8080 or 8088 :
+
+| ID | User | Name | AppType | Queue | Priority | Start Time | Finish Time | State | Final Status |
